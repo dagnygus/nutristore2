@@ -1,5 +1,5 @@
 import { NgModule, inject } from '@angular/core';
-import { CanMatchFn, Route, Router, RouterModule, Routes, UrlSegment } from '@angular/router';
+import { CanMatchFn, PreloadAllModules, Route, Router, RouterModule, Routes, UrlSegment } from '@angular/router';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { isProductCategory } from './utils/utils';
 import { AuthStateRef } from './state/auth/state';
@@ -107,7 +107,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules, initialNavigation: 'enabledBlocking' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
