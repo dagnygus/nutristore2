@@ -1,0 +1,54 @@
+@use '../../../../colors.scss' as colors;
+
+:host {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 1fr;
+  justify-items: center;
+}
+
+.item-placeholder, .empty-container, .error-container {
+  border-radius: 12px;
+  background-color: rgba(174, 174, 174, .6);
+  backdrop-filter: blur(4px);
+}
+
+.item-placeholder {
+  padding-bottom: calc(100% + 120px);
+  width: 100%;
+  max-width: 225px;
+}
+
+.empty-container, .error-container {
+  grid-column: 1/-1;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+  text-align: center;
+  width: 100%;
+
+  > mat-icon {
+    transform: translateY(30%) scale(1.7);
+  }
+}
+
+.error-container {
+  border: 1px solid red
+}
+
+@media (min-width: 560px) {
+  :host {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 800px) {
+  :host {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+

@@ -1,0 +1,107 @@
+[
+  {
+    "id": "product101",
+    "name": "BRAWN NUTRITION EPI SARM 120caps",
+    "imageUrl": "assets/product-images/BRAWN-NUTRITION-EPI-SARM-120kaps-MEGA-SILA-i-MASA.jpg",
+    "price": "17$",
+    "rating": 3.9
+  },
+  {
+    "id": "product102",
+    "name": "DARK LABS MK-677 60 kaps",
+    "imageUrl": "assets/product-images/DARK-LABS-MK-677-60-kaps-SARM-ORYGINAL.jpg",
+    "price": "11$",
+    "rating": 4.7
+  },
+  {
+    "id": "product103",
+    "name": "Sarm 3 pak",
+    "imageUrl": "assets/product-images/Sarm-3-pak-mocny-zestaw-Winstroll-Moc-sterydow.jpg",
+    "price": "17$",
+    "rating": 3.1
+  },
+  {
+    "id": "product104",
+    "name": "WXN Labs LGD-4033 60 caps",
+    "imageUrl": "assets/product-images/WXN-Labs-LGD-4033-60-kaps-SARM-sila-masa-JAKOSC.jpg",
+    "price": "18$",
+    "rating": 4.1
+  },
+  {
+    "id": "product105",
+    "name": "WXN Labs GW-501516 60caps",
+    "imageUrl": "assets/product-images/WXN-Labs-GW-501516-60kaps-x-10mg-SARM-wytrzymalosc.jpg",
+    "price": "16$",
+    "rating": 4.1
+  },
+  {
+    "id": "product106",
+    "name": "SARM: MK AIC USA 90 KAPS",
+    "imageUrl": "assets/product-images/SARM-MK-AIC-USA-90-KAPS-15-MG-USA-ORGINAL-MK-677.jpg",
+    "price": "13$",
+    "rating": 4.7
+  },
+  {
+    "id": "product107",
+    "name": "BRAWN NUTRITION EPI SARM 120caps",
+    "imageUrl": "assets/product-images/BRAWN-NUTRITION-EPI-SARM-120kaps-MEGA-SILA-i-MASA_1.jpg",
+    "price": "17$",
+    "rating": 3.5
+  },
+  {
+    "id": "product108",
+    "name": "GODZILLA Sarm Stack 90 caps",
+    "imageUrl": "assets/product-images/GODZILLA-Sarm-Stack-90-caps-LAWLESS-LABS.jpg",
+    "price": "19$",
+    "rating": 4.4
+  },
+  {
+    "id": "product109",
+    "name": "SARM IBUTAMOREN MK-677 - 90 caps",
+    "imageUrl": "assets/product-images/SARM-IBUTAMOREN-MK-677-90-kapsulek-z-USA.jpg",
+    "price": "18$",
+    "rating": 3.8
+  },
+  {
+    "id": "product110",
+    "name": "OSTA R-12,5/ 90cap",
+    "imageUrl": "assets/product-images/OSTA-R-12-5-90cap-SARM-OSTARYNA-NAC.jpg",
+    "price": "11$",
+    "rating": 4.3
+  },
+  {
+    "id": "product111",
+    "name": "Sarmation Ostarine MK-2866 SARM 90caps",
+    "imageUrl": "assets/product-images/Sarmation-Ostarine-MK-2866-Ostaryna-SARM-90kaps.jpg",
+    "price": "18$",
+    "rating": 4.5
+  },
+  {
+    "id": "product112",
+    "name": "LGD 60caps Concealed Labs",
+    "imageUrl": "assets/product-images/LGD-60caps-Concealed-Labs-Mocny-Sarm.jpg",
+    "price": "17$",
+    "rating": 4.1
+  },
+  {
+    "id": "product113",
+    "name": "Savage Sarm Stack 90 caps",
+    "imageUrl": "assets/product-images/Savage-Sarm-Stack-90-caps-LAWLESS-LABS.jpg",
+    "price": "11$",
+    "rating": 3
+  },
+  {
+    "id": "product114",
+    "name": "Pro Nutrition Sarm LGD-4033 60kaps",
+    "imageUrl": "assets/product-images/Pro-Nutrition-Sarm-LGD-4033-60kaps-10mg.jpg",
+    "price": "20$",
+    "rating": 4.9
+  },
+  {
+    "id": "product115",
+    "name": "SARM YK-11 5 mg 60caps",
+    "imageUrl": "assets/product-images/SARM-YK-11-5-mg-60-kapsulek-DNA-ANABOLICS.jpg",
+    "price": "11$",
+    "rating": 4.7
+  }
+]

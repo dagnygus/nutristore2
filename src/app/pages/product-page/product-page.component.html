@@ -1,0 +1,104 @@
+<ng-container [sigSwitch]="vm.stateStatus">
+
+  <div class="product-container" *sigSwitchCase="StateStatus.complete">
+
+    <h3 [textContent]="vm.productData()!.name" class="product-name color-accent"></h3>
+    <div class="rating-container">
+      <product-rating [rating]="vm.productData()!.rating"/>
+    </div>
+    <div class="product-image-container mat-elevation-z3">
+      <img [src]="vm.productData()!.imageUrl" alt="">
+    </div>
+    <div class="price-panel mat-elevation-z2">
+      <div><p class="text-center mb-[8px]" [textContent]="vm.totalPrice()"></p></div>
+      <div class="price-panel-controls">
+        <button mat-ripple class="mat-elevation-z3" (click)="vm.incraseCount()">+</button>
+        <div class="count-holder mat-elevation-z3">
+          <span class="text-[10px]">count</span>
+          <span *watch [textContent]="vm.productCount()"></span>
+        </div>
+        <button mat-ripple class="mat-elevation-z3" (click)="vm.decreaseCount()">-</button>
+        <button mat-ripple class="mat-elevation-z3 add-btn" (click)="onAddButtonClick()">
+          <span class="color-accent">Add to cart</span>
+        </button>
+      </div>
+    </div>
+    <section class="ingredients-section">
+      <h4 class="m-[4px]">Ingredients:</h4>
+      <div class="ingredients-container">
+        @for (ingeredient of vm.productData()!.ingredients; track $index) {
+          <span class="ingeredient" [textContent]="ingeredient"></span>
+        }
+      </div>
+    </section>
+    <section class="description-section">
+      <h4 class="mb-[12px]">Description</h4>
+      <p [textContent]="vm.productData()!.description"></p>
+    </section>
+
+    <ul class="assurances-list">
+      <li>
+        <h4 class="flex items-center color-accent">
+          <mat-icon color="primary" class="mr-[4px]">done</mat-icon> Fast delivery in 24 hours
+        </h4>
+        <p>We deliver parcels in Poland by DPD, UPS and Inpost courier.</p>
+      </li>
+      <li>
+        <h4 class="flex items-center color-accent">
+          <mat-icon  color="primary" class="mr-[4px]">done</mat-icon> Delivery to Parcel Lockers
+        </h4>
+        <p>
+          If you do not want the parcel to be delivered to your home address, we can send it
+          to a selected parcel locker in your area.
+        </p>
+      </li>
+      <li>
+        <h4 class="flex items-center color-accent">
+          <mat-icon color="primary" class="mr-[4px]">done</mat-icon> International shipping
+        </h4>
+        <p>
+          We deliver orders throughout Europe. We send shipments via DPD and UPS courier.
+        </p>
+      </li>
+      <li>
+        <h4 class="flex items-center color-accent">
+          <mat-icon color="primary" class="mr-[4px]">done</mat-icon> Various forms of payment
+        </h4>
+        <p>
+          You can pay for the order to the courier in cash or by card upon delivery,
+          or pay for it in advance by a standard bank transfer.
+        </p>
+      </li>
+      <li>
+        <h4 class="flex items-center color-accent">
+          <mat-icon color="primary" class="mr-[4px]">done</mat-icon> Discreet shipping
+        </h4>
+        <p>
+          We pack parcels in unmarked boxes, so no one will know what's inside your package.
+        </p>
+      </li>
+    </ul>
+
+    <div class="col-[1/-1] flex justify-end w-full mt-[32px]">
+      <a mat-raised-button color="primary" routerLink="/">Go to home page</a>
+    </div>
+
+  </div>
+
+  <ng-template [sigSwitchCase]="StateStatus.pending">
+    <div class="pending-container h-full shine min-h-[75vh]">
+      <loading-spinner/>
+    </div>
+  </ng-template>
+
+  <ng-template [sigSwitchCase]="StateStatus.error">
+    <div class="error-container">
+        <p class="text-red-600">An error has accurred!</p>
+        <mat-icon color="warn">sentiment_dissatisfied</mat-icon>
+    </div>
+  </ng-template>
+
+
+
+</ng-container>
+

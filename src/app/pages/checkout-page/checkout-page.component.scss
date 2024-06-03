@@ -1,0 +1,25 @@
+@use '../../../colors.scss' as colors;
+
+:host {
+  background-color: rgba(colors.$blue-grey-600, .6);
+  backdrop-filter: blur(4px);
+  min-height: 75vh;
+  color: white;
+}
+
+mat-vertical-stepper {
+  background-color: transparent !important;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: flex-end;
+
+  &:nth-of-type(odd) {
+    margin-bottom: 12px;
+  }
+
+  &:nth-of-type(even) {
+    margin-top: 12px;
+  }
+}

@@ -1,0 +1,55 @@
+<ng-container *sigIf="vm.orderPlaced else makeOrderTemplate">
+  <div class="flex justify-center items-center h-full">
+    <p>Your order has been placed. The shipment will be sent soon. We wish you hard training.</p>
+  </div>
+</ng-container>
+
+<ng-template #makeOrderTemplate>
+
+  <ng-template #noItemsTemplate>
+    <div class="flex justify-center items-center h-full">
+      <p>You did not selected any product. Select category and add product to Your cart.</p>
+    </div>
+  </ng-template>
+
+
+  <mat-vertical-stepper *sigIf="vm.itemsPressent else noItemsTemplate" id="checkout-stepper" class="bg-transparent">
+    <mat-step label="Youre cart items">
+      <div class="btn-group">
+        <a mat-raised-button color="accent" routerLink="/cart"><mat-icon>shopping_cart_checkout</mat-icon> Edit cart</a>
+        <button mat-raised-button color="primary" matStepperNext (click)="onClick()"><mat-icon>arrow_downward</mat-icon>Next</button>
+      </div>
+      <checkout-cart/>
+      <div class="btn-group">
+        <button mat-raised-button color="primary" matStepperNext (click)="onClick()"><mat-icon>arrow_downward</mat-icon>Next</button>
+      </div>
+    </mat-step>
+    <mat-step label="Delivery address" [stepControl]="vm.addressFormGroup">
+      <div class="btn-group">
+        <button mat-button color="accent" (click)="vm.startEditingAddressInfo()">Chenge delivery address</button>
+        <button mat-raised-button color="primary" matStepperPrevious (click)="onClick()"><mat-icon>arrow_upward</mat-icon>Previus</button>
+      </div>
+      <delivery-address-info/>
+      <div class="btn-group">
+        <button mat-raised-button color="primary" matStepperNext (click)="onClick()"><mat-icon>arrow_downward</mat-icon>Next</button>
+      </div>
+    </mat-step>
+    <mat-step label="Summary">
+      <div class="btn-group">
+        <button mat-raised-button color="primary" matStepperPrevious (click)="onClick()"><mat-icon>arrow_upward</mat-icon>Previus</button>
+      </div>
+      <checkout-summary/>
+      <div class="btn-group">
+        <button mat-raised-button color="accent" matStepperNext (click)="onClick()"><mat-icon>monetization_on</mat-icon>Accept</button>
+      </div>
+    </mat-step>
+    <mat-step label="Finalize">
+      <div class="btn-group">
+        <button mat-raised-button color="primary" matStepperPrevious (click)="onClick()"><mat-icon>arrow_upward</mat-icon>Previus</button>
+      </div>
+      <checkout-payment/>
+    </mat-step>
+  </mat-vertical-stepper>
+
+</ng-template>
+

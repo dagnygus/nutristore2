@@ -1,0 +1,30 @@
+<ng-container [sigSwitch]="vm.stateStatus">
+
+  <ng-template [sigSwitchCase]="StateStatus.complete">
+
+    <cart-item *sigFor="let item of vm.cartItems; let index = index; trackBy: 'id'"
+               [cartItem]="item()"
+               [index]="index()"
+               class="mat-elevation-z3"/>
+
+    <div class="summary-container mat-elevation-z3">
+      <div class="price-container">
+        <p *watch>Total price {{vm.totalPrice()}}</p>
+      </div>
+      <div class="buttons-container">
+        <button mat-raised-button color="warn" (click)="vm.clearCart()"><span class="text-[12px]">Clear cart</span></button>
+        <a routerLink="/checkout" mat-raised-button color="accent"><span class="text-[12px]">Make order</span></a>
+      </div>
+    </div>
+
+  </ng-template>
+
+  <ng-template [sigSwitchCase]="StateStatus.empty">
+    <div class="emty-message-container">
+      <mat-icon color="warn">sentiment_dissatisfied</mat-icon>
+      <p>Youre cart is empty</p>
+    </div>
+  </ng-template>
+
+</ng-container>
+

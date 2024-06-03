@@ -1,0 +1,7 @@
+<section class="block">
+  <h3 *watch class="text-white text-center text-[28px] my-[16px] mx-[12px]" [textContent]="vm.category()"></h3>
+  <products-list [data]="vm.items" [stateStatus]="vm.stateStatus" (addItem)="onAddItem($event)"/>
+  <div class="flex justify-end mt-[24px]">
+    <a mat-raised-button color="primary" routerLink="/">Go to home page</a>
+  </div>
+</section>

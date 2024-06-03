@@ -1,0 +1,77 @@
+<form class="register-form" [formGroup]="vm.formGroup" (ngSubmit)="vm.trySubmit()">
+  <p>Complete the form to register account. If you already have accound, <a routerLink="/login" class="color-accent">sign in</a> now</p>
+
+  <div *sigIf="vm.errorMessage" class="error-message-conteiner mat-elevation-z3">
+    <p>{{ vm.errorMessage() }}</p>
+  </div>
+
+  <form-input labelText="First Name"
+              name="firstName"
+              appearance="outline"
+              color="accent"
+              [checkTrigger]="vm.checkTrigger"/>
+
+  <form-input labelText="Last Name"
+              name="lastName"
+              appearance="outline"
+              color="accent"
+              [checkTrigger]="vm.checkTrigger"/>
+
+  <form-input labelText="Address E-mail"
+              name="email"
+              appearance="outline"
+              color="accent"
+              [checkTrigger]="vm.checkTrigger"/>
+
+  <form-input labelText="City"
+              name="city"
+              appearance="outline"
+              color="accent"
+              [checkTrigger]="vm.checkTrigger"/>
+
+  <form-input labelText="Street"
+              name="street"
+              appearance="outline"
+              color="accent"
+              [checkTrigger]="vm.checkTrigger"/>
+
+  <form-input labelText="State"
+              name="state"
+              appearance="outline"
+              color="accent"
+              [checkTrigger]="vm.checkTrigger"/>
+
+  <form-input labelText="Country"
+              name="country"
+              appearance="outline"
+              color="accent"
+              [checkTrigger]="vm.checkTrigger"/>
+
+  <form-input labelText="Zip Code"
+              name="zipCode"
+              appearance="outline"
+              color="accent"
+              [checkTrigger]="vm.checkTrigger"/>
+
+  <form-input labelText="Password"
+              name="password"
+              [type]="vm.passwordType"
+              appearance="outline"
+              color="accent"
+              [checkTrigger]="vm.checkTrigger"
+              withIcon
+              (iconClick)="vm.tooglePasswordVisibility()"/>
+
+  <form-input labelText="Confirm Password"
+              name="confirmPassword"
+              [type]="vm.passwordType"
+              appearance="outline"
+              color="accent"
+              [checkTrigger]="vm.checkTrigger"
+              withIcon
+              (iconClick)="vm.tooglePasswordVisibility()"/>
+  <div>
+    <button *watch mat-raised-button color="primary" type="submit" [disabled]="vm.submitDisabled()"><span class="text-[12px]">Register Account</span></button>
+    <a mat-raised-button color="warn" [routerLink]="vm.prevoisUrl"><span class="text-[12px]">Cancel</span></a>
+  </div>
+</form>

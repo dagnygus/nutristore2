@@ -1,0 +1,142 @@
+[
+  {
+    "id": "product1",
+    "name": "KFD PREMIUM AAKG 300g  (ARGININA)",
+    "imageUrl": "assets/product-images/KFD-PREMIUM-AAKG-300-G-ARGININA.jpg",
+    "price": "11$",
+    "rating": 3.7
+  },
+  {
+    "id": "product2",
+    "name": "ACTIVLAB BCAA XTRA 800g",
+    "imageUrl": "assets/product-images/ACTIVLAB-BCAA-XTRA-800g-AMINOKWASY-GLUTAMINA-AMINO.jpg",
+    "price": "16$",
+    "rating": 4.5
+  },
+  {
+    "id": "product3",
+    "name": "OLIMP AMINO EAANABOL XPLODE 520g",
+    "imageUrl": "assets/product-images/OLIMP-AMINO-EAANABOL-XPLODE-520-g-AMINOKWASY-EAA.jpg",
+    "price": "13$",
+    "rating": 4.7
+  },
+  {
+    "id": "product4",
+    "name": "ALLNUTRITION BCAA 500g",
+    "imageUrl": "assets/product-images/ALLNUTRITION-BCAA-500g-AMINOKWASY-ROZGALEZIONE.jpg",
+    "price": "17$",
+    "rating": 4.8
+  },
+  {
+    "id": "product5",
+    "name": "KFD PREMIUM BCAA 400g",
+    "imageUrl": "assets/product-images/KFD-PREMIUM-BCAA-400-g-Aminokwasy-Rozgalezione.jpg",
+    "price": "13$",
+    "rating": 3.6
+  },
+  {
+    "id": "product6",
+    "name": "Hi TEC BLADE 100% BCAA Powder 500g",
+    "imageUrl": "assets/product-images/Hi-TEC-BLADE-100-BCAA-Powder-500g-GLUTAMINA.jpg",
+    "price": "19$",
+    "rating": 3.2
+  },
+  {
+    "id": "product7",
+    "name": "OstroVit Citrulline 400g",
+    "imageUrl": "assets/product-images/OstroVit-Citrulline-400-CYTRULINA-PRZEDTRENINGOWKA.jpg",
+    "price": "18$",
+    "rating": 4.9
+  },
+  {
+    "id": "product8",
+    "name": "ECOMAX BCAA 2:1:1 500g",
+    "imageUrl": "assets/product-images/ECOMAX-BCAA-2-1-1-500-g-MOCNE-AMINOKWASY-AMINO.jpg",
+    "price": "15$",
+    "rating": 3.2
+  },
+  {
+    "id": "product9",
+    "name": "SFD BCAA 500g",
+    "imageUrl": "assets/product-images/SFD-BCAA-500-g-AMINOKWASY-ROZGALEZIONE-AMINO.jpg",
+    "price": "14$",
+    "rating": 4.2
+  },
+  {
+    "id": "product10",
+    "name": "SFD L-ARGININE 500g",
+    "imageUrl": "assets/product-images/SFD-L-ARGININE-500g-AMINOKWASY-SILA-AAKG-ARGININA.jpg",
+    "price": "14$",
+    "rating": 3.6
+  },
+  {
+    "id": "product11",
+    "name": "ACTIVLAB BCAA XTRA INSTANT 800g",
+    "imageUrl": "assets/product-images/ACTIVLAB-BCAA-XTRA-INSTANT-800g-GLUTAMINA-AMINO.jpg",
+    "price": "16$",
+    "rating": 4.6
+  },
+  {
+    "id": "product12",
+    "name": "OstroVit Supreme Pure Glutamine 500g",
+    "imageUrl": "assets/product-images/OstroVit-Supreme-Pure-Glutamine-500-g-GLUTAMINA.jpg",
+    "price": "16$",
+    "rating": 3.2
+  },
+  {
+    "id": "product13",
+    "name": "KFD EAA Instant 375g",
+    "imageUrl": "assets/product-images/KFD-EAA-Instant-Aminokwasy-Egzogenne-375-g.jpg",
+    "price": "11$",
+    "rating": 4.7
+  },
+  {
+    "id": "product14",
+    "name": "OLIMP BCAA XPLODE 1000g",
+    "imageUrl": "assets/product-images/OLIMP-BCAA-XPLODE-1000g-AMINOKWASY-BCAA-MOCNE.jpg",
+    "price": "11$",
+    "rating": 4.2
+  },
+  {
+    "id": "product15",
+    "name": "ALLNUTRITION BETA ALANINE 500g",
+    "imageUrl": "assets/product-images/ALLNUTRITION-BETA-ALANINE-500-g-BETA-ALANINA-SILA.jpg",
+    "price": "15$",
+    "rating": 4
+  },
+  {
+    "id": "product16",
+    "name": "PREMIUMLABS23 BCAA 9000 2:1:1 400g",
+    "imageUrl": "assets/product-images/PREMIUMLABS23-BCAA-9000-2-1-1-400G-MIESNIE-RZEZBA.jpg",
+    "price": "17$",
+    "rating": 4
+  },
+  {
+    "id": "product17",
+    "name": "IRONFLEX BCAA RECOVERY 500g",
+    "imageUrl": "assets/product-images/IRONFLEX-BCAA-RECOVERY-500g-AMINOKWASY-GLUTAMINA.jpg",
+    "price": "13$",
+    "rating": 4.3
+  },
+  {
+    "id": "product18",
+    "name": "Evolite Leucine 300g",
+    "imageUrl": "assets/product-images/EVOLITE-AAKG-300g-PURE-ARGININA-ARGI-POMPA-POWER.jpg",
+    "price": "14$",
+    "rating": 3.9
+  },
+  {
+    "id": "product19",
+    "name": "TREC BCAA G FORCE 360g",
+    "imageUrl": "assets/product-images/TREC-BCAA-G-FORCE-360KAP-AMINOKWASY-GLUTAMINA.jpg",
+    "price": "13$",
+    "rating": 3.6
+  },
+  {
+    "id": "product20",
+    "name": "ECOMAX X RECOVERY 500G",
+    "imageUrl": "assets/product-images/ECOMAX-X-RECOVERY-500G-BCAA-EAA-REGENERACJA-MASA.jpg",
+    "price": "17$",
+    "rating": 3.2
+  }
+]

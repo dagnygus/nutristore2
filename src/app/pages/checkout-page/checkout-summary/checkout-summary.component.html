@@ -1,0 +1,59 @@
+<div class="info-container mat-elevation-z3" *watch>
+  <h3>Addressee Data</h3>
+  <div>
+    <span>First name:</span>
+  </div>
+  <div>
+    <span [textContent]="vm.userData().firstName"></span>
+  </div>
+  <div>
+    <span>Last name:</span>
+  </div>
+  <div>
+    <span [textContent]="vm.userData().lastName"></span>
+  </div>
+</div>
+
+<div class="info-container mat-elevation-z3" *watch>
+  <h3>Delivery Address Data</h3>
+  <div>
+    <span>City:</span>
+  </div>
+  <div>
+    <span [textContent]="vm.addressData().city"></span>
+  </div>
+  <div>
+    <span>Street:</span>
+  </div>
+  <div>
+    <span [textContent]="vm.addressData().street"></span>
+  </div>
+  <div>
+    <span>State:</span>
+  </div>
+  <div>
+    <span [textContent]="vm.addressData().state"></span>
+  </div>
+  <div>
+    <span>Country:</span>
+  </div>
+  <div>
+    <span [textContent]="vm.addressData().country"></span>
+  </div>
+  <div>
+    <span>Zip-code</span>
+  </div>
+  <div>
+    <span [textContent]="vm.addressData().zipCode"></span>
+  </div>
+</div>
+
+<div class="products-container mat-elevation-z3">
+  <h3>Products</h3>
+  <ul>
+    <li *sigFor="let item of vm.cartItems; trackBy: 'id'" class="mat-elevation-z2">
+      <span [textContent]="item().name"></span><span>x {{item().quantity}}</span>
+    </li>
+  </ul>
+  <p *watch>Total price: {{vm.totalPrice()}}</p>
+</div>

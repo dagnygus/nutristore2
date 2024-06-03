@@ -1,0 +1,57 @@
+<div *nzLocalView="Priority.immediate; let lvCdRef" class="upper-container">
+  <button mat-raised-button color="accent" [matMenuTriggerFor]="menu" (click)="detectChanges(lvCdRef, Priority.immediate)">
+    <mat-icon class="color-primary">person</mat-icon><span class="color-primary">Youre account</span>
+  </button>
+
+  <mat-menu #menu>
+    <div class="menu-container">
+      <div>
+        <p>
+          @if (vm.authData | in:lvCdRef) {
+            Welcome {{ vm.authData()!.firstName }} {{ vm.authData()!.lastName }} to our store. Check youre account <a routerLink="/account" class="color-accent cursor-pointer">here</a> or <a routerLink="/update" class="color-accent cursor-pointer">update</a> youre information.
+          } @else {
+            Welcome to our store! <a routerLink="/login" class="color-accent cursor-pointer">Log in</a> to youre account or go to <a routerLink="/register" class="color-accent cursor-pointer">registration.</a>
+          }
+        </p>
+      </div>
+      <div>
+        <a routerLink="/account" mat-button><mat-icon color="accent">lock</mat-icon> Youre account</a>
+      </div>
+      <div>
+        <a routerLink="/cart" mat-button><mat-icon color="accent">shopping_basket</mat-icon> Basket</a>
+      </div>
+      <div>
+        <a routerLink="/checkout" mat-button><mat-icon color="accent">done</mat-icon> Order</a>
+      </div>
+      @if (vm.authData()) {
+        <div>
+          <button mat-button color="accent" (click)="vm.logout()"><mat-icon color="accent">logout</mat-icon> Logout</button>
+        </div>
+      }
+    </div>
+  </mat-menu>
+
+  <button mat-stroked-button>Currency</button>
+</div>
+
+<div class="divider first-divider bg-primary mat-elevation-z3"></div>
+
+<div class="middle-container">
+  <p class="flex items-center"><mat-icon color="accent">mail</mat-icon><span class="text-white">contact&#64;nutristore.com</span></p>
+  <a routerLink="/cart" mat-raised-button color="primary" *watch><mat-icon>shopping_basket</mat-icon>{{vm.cartItemsCount()}} items</a>
+</div>
+
+<div class="divider bg-primary mat-elevation-z3"></div>
+
+<div class="lower-container justify-self-center">
+  <div class="flex drop-shadow-lg flex-col cursor-pointer" role="link" routerLink="/">
+    <img src="/assets/new-images/for_logo.png" alt="" class="w-full h-auto">
+    <h1 class="subtitle">NUTRISTORE.COM</h1>
+  </div>
+  <div class="w-full">
+    <nutristore-searchbox/>
+    <button mat-raised-button color="primary" class="category-btn" (click)="vm.showSidenav()"><mat-icon class="color-accent">menu</mat-icon><span class="color-accent">Categories</span></button>
+  </div>
+</div>
+
+<div id="header-last-divider" class="divider bg-primary last-divider mat-elevation-z3"></div>

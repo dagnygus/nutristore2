@@ -1,0 +1,9 @@
+@use '../../../colors.scss' as colors;
+
+:host {
+  background-color: rgba(colors.$blue-grey-600, .6);
+  backdrop-filter: blur(4px);
+  display: grid;
+  align-items: center;
+  min-height: 80vh;
+}

@@ -1,0 +1,17 @@
+<mat-form-field appearance="outline" color="accent" >
+  <mat-label>Search</mat-label>
+  <input #searchInput
+         type="text"
+         matInput
+         (focus)="detectChanges(Priority.immediate)"
+         (blur)="detectChanges(Priority.immediate)"
+         (input)="vm.searchFor(searchInput.value)"
+         (keydown)="onKeyDown($event.key, Priority.immediate)"
+         [matAutocomplete]="auto">
+  <mat-icon matSuffix color="accent">search</mat-icon>
+  <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)="vm.optionSelected($event.option.value)">
+    @for (item of vm.searchItems | in:cdRef; track item.id) {
+      <mat-option [value]="item"><span class="text-[12px]">{{ item.name }}</span></mat-option>
+    }
+  </mat-autocomplete>
+</mat-form-field>

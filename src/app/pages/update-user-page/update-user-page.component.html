@@ -1,0 +1,53 @@
+<form class="register-form" [formGroup]="vm.formGroup" (ngSubmit)="vm.trySubmit()">
+
+  <p>Complete the form to udpdate account information.</p>
+
+  <div *sigIf="vm.errorMessage" class="error-message-conteiner mat-elevation-z3">
+    <p>{{ vm.errorMessage() }}</p>
+  </div>
+
+  <form-input labelText="First Name"
+              name="firstName"
+              color="accent"
+              appearance="outline"/>
+
+  <form-input labelText="Last Name"
+              name="lastName"
+              color="accent"
+              appearance="outline"/>
+
+  <form-input labelText="Address E-mail"
+              name="email"
+              color="accent"
+              appearance="outline"/>
+
+  <form-input labelText="City"
+              name="city"
+              color="accent"
+              appearance="outline"/>
+
+  <form-input labelText="Street"
+              name="street"
+              color="accent"
+              appearance="outline"/>
+
+  <form-input labelText="State"
+              name="state"
+              color="accent"
+              appearance="outline"/>
+
+  <form-input labelText="Country"
+              name="country"
+              color="accent"
+              appearance="outline"/>
+
+  <form-input labelText="Zip-code"
+              name="zipCode"
+              color="accent"
+              appearance="outline"/>
+
+  <div>
+    <button *watch mat-raised-button color="primary" type="submit" [disabled]="vm.submitDisabled()"><span class="text-[12px]">Update</span></button>
+    <a mat-raised-button color="warn" [routerLink]="vm.previousUrl"><span class="text-[12px]">Cancel</span></a>
+  </div>
+</form>

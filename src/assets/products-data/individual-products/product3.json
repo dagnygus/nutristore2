@@ -1,0 +1,17 @@
+{
+  "id": "product3",
+  "name": "OLIMP AMINO EAANABOL XPLODE 520g",
+  "imageUrl": "assets/product-images/OLIMP-AMINO-EAANABOL-XPLODE-520-g-AMINOKWASY-EAA.jpg",
+  "price": "13$",
+  "rating": 4.7,
+  "description": "Donec cursus, mi eu sollicitudin venenatis, eros dolor laoreet arcu, ac ornare erat dolor in mauris. Quisque turpis metus, tincidunt sit amet volutpat vitae, pretium sit amet sem. Phasellus porta molestie risus sed tristique. Vivamus sagittis mi nec erat placerat, in mollis orci convallis. Nunc vitae ex vitae odio cursus gravida. Proin hendrerit ut ex posuere blandit. Etiam non urna molestie leo sodales iaculis a a lorem.",
+  "ingredients": [
+    "Maecenas",
+    "Purus",
+    "Maximus",
+    "Pellentesque",
+    "Sollicitudin",
+    "Elementum",
+    "Fermentum"
+  ]
+}

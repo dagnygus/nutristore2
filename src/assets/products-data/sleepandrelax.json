@@ -1,0 +1,16 @@
+[
+  {
+    "id": "product188",
+    "name": "Lights Out 60caps",
+    "imageUrl": "assets/product-images/lights-out-60caps_revange_nutrition_sklep_shop-600x600_0.jpg",
+    "price": "12$",
+    "rating": 4.2
+  },
+  {
+    "id": "product189",
+    "name": "Lights Out 30caps",
+    "imageUrl": "assets/product-images/lights-out-30caps_revange_nutrition_sklep_shop-600x600_0.jpg",
+    "price": "10$",
+    "rating": 3.9
+  }
+]

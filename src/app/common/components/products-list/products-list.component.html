@@ -1,0 +1,30 @@
+<ng-container [sigSwitch]="stateStatus">
+
+  <ng-template [sigSwitchCase]="StateStatus.complete">
+    <products-list-item *sigFor="let item of data; trackBy: 'id'" [item]="item()" (addItem)="addItem.emit($event)"/>
+  </ng-template>
+
+  <ng-template [sigSwitchCase]="StateStatus.pending">
+    @for (_ of RANGE_8; track $index) {
+      <div class="item-placeholder shine"></div>
+    }
+  </ng-template>
+
+  <ng-template [sigSwitchCase]="StateStatus.empty">
+    <div class="empty-container">
+      <p>There are no {{category()}} products to display.</p>
+      <mat-icon color="accent">sentiment_dissatisfied</mat-icon>
+    </div>
+  </ng-template>
+
+  <ng-template [sigSwitchCase]="StateStatus.error">
+    <div class="error-container">
+      <p class="text-red-600">An error has accurred!</p>
+      <mat-icon color="warn">sentiment_dissatisfied</mat-icon>
+    </div>
+  </ng-template>
+
+
+</ng-container>
+
+

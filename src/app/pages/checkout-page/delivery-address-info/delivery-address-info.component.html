@@ -1,0 +1,89 @@
+
+<form *sigIf="vm.editAddress else elseTemplate" [formGroup]="vm.addressFormGroup" (ngSubmit)="vm.trySubmitAddressForm()">
+  <form-input type="text"
+              name="city"
+              labelText="City"
+              color="accent"
+              appearance="outline"
+              [checkTrigger]="vm.addressFormCheckTrigger"/>
+
+  <form-input type="text"
+              name="street"
+              labelText="Street"
+              color="accent"
+              appearance="outline"
+              [checkTrigger]="vm.addressFormCheckTrigger"/>
+
+  <form-input type="text"
+              name="state"
+              labelText="State"
+              color="accent"
+              appearance="outline"
+              [checkTrigger]="vm.addressFormCheckTrigger"/>
+
+  <form-input type="text"
+              name="country"
+              labelText="Country"
+              color="accent"
+              appearance="outline"
+              [checkTrigger]="vm.addressFormCheckTrigger"/>
+
+  <form-input type="text"
+              name="zipCode"
+              labelText="Zip-code"
+              color="accent"
+              appearance="outline"
+              [checkTrigger]="vm.addressFormCheckTrigger"/>
+
+
+  <div>
+    <button *watch mat-raised-button color="primary" type="submit" [disabled]="vm.addressFormSubmitDissabled()">Accept</button>
+    <button mat-raised-button color="warn" type="button" (click)="vm.cancelEditingAddress()">Cancel</button>
+  </div>
+</form>
+
+<ng-template #elseTemplate>
+  <div class="address-info-container">
+    <div class="address-info-row mat-elevation-z2">
+      <div>
+        <span>City:</span>
+      </div>
+      <div>
+        <span [textContent]="vm.addressData().city"></span>
+      </div>
+    </div>
+    <div class="address-info-row mat-elevation-z2">
+      <div>
+        <span>Street:</span>
+      </div>
+      <div>
+        <span [textContent]="vm.addressData().street"></span>
+      </div>
+    </div>
+    <div class="address-info-row mat-elevation-z2">
+      <div>
+        <span>State:</span>
+      </div>
+      <div>
+        <span [textContent]="vm.addressData().state"></span>
+      </div>
+    </div>
+    <div class="address-info-row mat-elevation-z2">
+      <div>
+        <span>Country:</span>
+      </div>
+      <div>
+        <span [textContent]="vm.addressData().country"></span>
+      </div>
+    </div>
+    <div class="address-info-row mat-elevation-z2">
+      <div>
+        <span>Zip-code</span>
+      </div>
+      <div>
+        <span [textContent]="vm.addressData().zipCode"></span>
+      </div>
+    </div>
+  </div>
+</ng-template>
+

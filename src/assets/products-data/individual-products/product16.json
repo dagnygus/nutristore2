@@ -1,0 +1,24 @@
+{
+  "id": "product16",
+  "name": "PREMIUMLABS23 BCAA 9000 2:1:1 400g",
+  "imageUrl": "assets/product-images/PREMIUMLABS23-BCAA-9000-2-1-1-400G-MIESNIE-RZEZBA.jpg",
+  "price": "17$",
+  "rating": 4,
+  "description": "Donec cursus, mi eu sollicitudin venenatis, eros dolor laoreet arcu, ac ornare erat dolor in mauris. Quisque turpis metus, tincidunt sit amet volutpat vitae, pretium sit amet sem. Phasellus porta molestie risus sed tristique. Vivamus sagittis mi nec erat placerat, in mollis orci convallis. Nunc vitae ex vitae odio cursus gravida. Proin hendrerit ut ex posuere blandit. Etiam non urna molestie leo sodales iaculis a a lorem.",
+  "ingredients": [
+    "Vestibulum",
+    "Purus",
+    "Curabitur",
+    "Sollicitudin",
+    "Pellentesque",
+    "Condimentum",
+    "Vivamus",
+    "Malesuada",
+    "Consectetur",
+    "Fringilla",
+    "Aenean",
+    "Pellentesque",
+    "Nullam",
+    "Bibendum"
+  ]
+}

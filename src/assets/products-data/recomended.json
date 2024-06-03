@@ -1,0 +1,30 @@
+[
+  {
+    "id": "product29",
+    "name": "Evolite Ultra Burner - 120caps",
+    "imageUrl": "assets/product-images/Evolite-Ultra-Burner-120kaps-SPALACZ-TLUSZCZU.jpg",
+    "price": "15$",
+    "rating": 4.4
+  },
+  {
+    "id": "product166",
+    "name": "IQ PLUS 60caps",
+    "imageUrl": "assets/product-images/IQ-PLUS-PAMIEC-I-KONCENTRACJA.jpg",
+    "price": "14$",
+    "rating": 4.5
+  },
+  {
+    "id": "product16",
+    "name": "PREMIUMLABS23 BCAA 9000 2:1:1 400g",
+    "imageUrl": "assets/product-images/PREMIUMLABS23-BCAA-9000-2-1-1-400G-MIESNIE-RZEZBA.jpg",
+    "price": "17$",
+    "rating": 4
+  },
+  {
+    "id": "product148",
+    "name": "OLIMP FLEXAGEN FORTE 60tab",
+    "imageUrl": "assets/product-images/OLIMP-FLEXAGEN-FORTE-60tabl-GLUKOZAMINA-KOLAGEN.jpg",
+    "price": "20$",
+    "rating": 3.3
+  }
+]

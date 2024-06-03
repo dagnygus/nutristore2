@@ -1,0 +1,13 @@
+@use '../../../colors.scss' as colors;
+
+:host {
+  background-color: rgba(174, 174, 174, .7);
+  backdrop-filter: blur(4px);
+  color: white;
+  padding: 32px 24px;
+  min-height: 80vh;
+}
+
+img {
+  display: inline-block;
+}

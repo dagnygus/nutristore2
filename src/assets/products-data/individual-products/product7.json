@@ -1,0 +1,17 @@
+{
+  "id": "product7",
+  "name": "OstroVit Citrulline 400g",
+  "imageUrl": "assets/product-images/OstroVit-Citrulline-400-CYTRULINA-PRZEDTRENINGOWKA.jpg",
+  "price": "18$",
+  "rating": 4.9,
+  "description": "In placerat lacus non nunc tristique, eu euismod velit fringilla. Vivamus ac fringilla erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque congue congue sem, congue elementum ante tristique sit amet. Etiam ornare velit a sem placerat luctus. Curabitur maximus, dolor a euismod fringilla, mi leo placerat erat, non condimentum est massa sit amet magna. Integer ac dapibus nulla. Donec in dignissim libero. Donec metus velit, ullamcorper non tempus sit amet, dignissim id urna. Nullam turpis ante, imperdiet eu posuere eget, tincidunt vel lorem. Duis aliquam magna eu mattis aliquet. Curabitur eget tempus nibh. Maecenas auctor arcu ut aliquet tincidunt. Proin ultrices magna et sapien placerat scelerisque.",
+  "ingredients": [
+    "Pellentesque",
+    "Pellentesque ",
+    "Vestibulum",
+    "Suspendisse",
+    "Malesuada",
+    "Curabitur",
+    "Condimentum"
+  ]
+}

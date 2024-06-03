@@ -1,0 +1,16 @@
+<h2>Hi <span class="color-primary underline" [textContent]="vm.userData().firstName"></span>.<br> Youre account</h2>
+<h3 class="color-accent">Common information</h3>
+<p>First Name: {{vm.userData().firstName}}</p>
+<p>Last Name: {{vm.userData().lastName}}</p>
+<p>Address E-main: {{vm.userData().email}}</p>
+<h3 class="color-accent">Address information</h3>
+<p>City: {{vm.userData().city}}</p>
+<p>Street: {{vm.userData().street}}</p>
+<p>State: {{vm.userData().state}}</p>
+<p>Country: {{vm.userData().country}}</p>
+<p>Zip-code: {{vm.userData().zipCode}}</p>
+
+<div class="accont-page-actions">
+  <a mat-raised-button routerLink="/update" color="primary"><span class="btn-text">Update account</span></a>
+  <a mat-raised-button routerLink="/password" color="accent"><span class="btn-text">Change password</span></a>
+</div>

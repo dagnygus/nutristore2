@@ -1,0 +1,26 @@
+<form [formGroup]="vm.formGroup" (ngSubmit)="vm.trySubmit()">
+  <p>Comlete the form to login. If you not have accound, <a routerLink="/register" class="color-accent">register</a> now</p>
+
+  <div *sigIf="vm.errorMessage" class="error-message-conteiner mat-elevation-z3">
+    <p>{{ vm.errorMessage() }}</p>
+  </div>
+
+  <form-input labelText="Address E-mail"
+              name="email"
+              appearance="outline"
+              color="accent"
+              [checkTrigger]="vm.checkTrigger"/>
+
+  <form-input labelText="Password"
+              name="password"
+              withIcon
+              (iconClick)="vm.tooglePasswordVisibility()"
+              [type]="vm.passwordType"
+              appearance="outline"
+              color="accent"
+              [checkTrigger]="vm.checkTrigger"/>
+  <div>
+    <button *watch mat-raised-button color="primary" type="submit" [disabled]="vm.submitDisabled()"><span class="text-[12px]">Login</span></button>
+    <a mat-raised-button color="warn" [routerLink]="vm.proviusUrl"><span class="text-[12px]">Cancel</span></a>
+  </div>
+</form>

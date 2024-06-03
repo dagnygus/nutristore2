@@ -1,0 +1,13 @@
+<div class="image-container">
+  <img [src]="item.imageUrl" alt="">
+
+  <div class="count-holder mat-elevation-z2">
+    <p>x {{item.quantity}}</p>
+  </div>
+</div>
+<div class="name-container mat-elevation-z2">
+  <p [textContent]="item.name"></p>
+</div>
+<div class="price-container mat-elevation-z2">
+  <p>Total price: {{item.price}}</p>
+</div>

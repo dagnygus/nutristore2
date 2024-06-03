@@ -1,0 +1,4 @@
+<checkout-cart-item *sigFor="let item of vm.cartItems; trackBy: 'id'" [item]="item()"/>
+<div class="cart-total-pirce-container mat-elevation-z3">
+  <p *watch>Total price: {{vm.totalPrice()}}</p>
+</div>

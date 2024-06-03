@@ -1,0 +1,52 @@
+<div class="flex justify-end">
+  <button mat-icon-button color="warn" (click)="vm.hideSidenav()"><mat-icon>cancel</mat-icon></button>
+</div>
+<nav class="h-full overflow-y-auto">
+  <ul class="drop-shadow">
+    <li>
+      <a matRipple [routerLink]="['/products', ProductCategory.AMINOACIDS]"><img src="assets/images/aminoasid_icon.png" alt="amino_icon"> <span>Aminoacids</span></a>
+    </li>
+    <li>
+      <a matRipple [routerLink]="['/products', ProductCategory.FAT_BURNERS]" [fragment]="ProductCategory.FAT_BURNERS"><img src="assets/images/fat_burners_icon.png" alt="amino_icon"> Fat burners</a>
+    </li>
+    <li>
+      <a matRipple [routerLink]="['/products', ProductCategory.PREWORKOUT]"><img src="assets/images/preworkout_icon.png" alt="amino_icon"> Preworkout</a>
+    </li>
+    <li>
+      <a matRipple [routerLink]="['/products', ProductCategory.AFTERWORKOUT]"><img src="assets/images/regeneration_icon.png" alt="amino_icon"> Afterworkout</a>
+    </li>
+    <li>
+      <a matRipple [routerLink]="['/products', ProductCategory.CREATINE]"><img src="assets/images/creatin_icon.png" alt="amino_icon"> Creatine</a>
+    </li>
+    <li>
+      <a matRipple [routerLink]="['/products', ProductCategory.SARMS]"><img src="assets/images/sarm_icon.png" alt="amino_icon"> SARMs</a>
+    </li>
+    <li>
+      <a matRipple [routerLink]="['/products', ProductCategory.LIVER_PROTECTION]"><img src="assets/images/liver_protection_icon.png" alt="amino_icon"> Liver protection</a>
+    </li>
+    <li>
+      <a matRipple [routerLink]="['/products', ProductCategory.HEALTH_AND_VITAMINS]"><img src="assets/images/health_icon.png" alt="amino_icon"> Health / Vitamins</a>
+    </li>
+    <li>
+      <a matRipple [routerLink]="['/products', ProductCategory.JOINT_PROTECTION]"><img src="assets/images/bone_joint_protection_icon.png" alt="joint_protectino_icon"> Joint protection</a>
+    </li>
+    <li>
+      <a matRipple [routerLink]="['/products', ProductCategory.MEMORY_AND_CONCETRATION]"><img src="assets/images/memory_and_concetration_icon.png" alt="memory_and_concetration_icon"> Memory / Concetration</a>
+    </li>
+    <li>
+      <a matRipple [routerLink]="['/products', ProductCategory.ENERGY_AND_AGITATION]"><img src="assets/images/energy_icon.png" alt="energy_icon"> Energy / Agitation</a>
+    </li>
+    <li>
+      <a matRipple [routerLink]="['/products', ProductCategory.STRESS_AND_NERVES]"><img src="assets/images/stress_icon.png" alt="stress_icon"> Stress / Nerves</a>
+    </li>
+    <li>
+      <a matRipple [routerLink]="['/products', ProductCategory.SLEEP_AND_RELAX]"><img src="assets/images/dream_and_relax_icon.png" alt="dream_and_relax_icon"> Sleep / Relax</a>
+    </li>
+    <li>
+      <a matRipple [routerLink]="['/products', ProductCategory.POTENCY_AND_TESTOSTERONE]"><img src="assets/images/potencial_icon.png" alt="potencial_icon"> Potency / Testosterone</a>
+    </li>
+    <li>
+      <a matRipple [routerLink]="['/products', ProductCategory.LIBIDO_IN_WOMAN]"><img src="assets/images/libido_icon.png" alt="libido_icon"> Libido in woman</a>
+    </li>
+  </ul>
+</nav>

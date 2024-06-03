@@ -1,0 +1,15 @@
+<div class="image-container">
+  <img [src]="item.imageUrl" alt="product_picture">
+</div>
+<div class="body-container">
+  <product-rating [rating]="item.rating"/>
+  <h4 class="text-[12px] text-white mx-[4px] mt-[2px]" [textContent]="item.name"></h4>
+  <button class="bg-primary" matRipple (click)="onButtonClick($event);">
+    <mat-icon>add</mat-icon>
+    <mat-icon>shopping_basket</mat-icon>
+  </button>
+</div>
+
+<div class="price-container bg-primary mat-elevation-z2">
+  <span [textContent]="item.price"></span>
+</div>

@@ -1,0 +1,20 @@
+{
+  "id": "product11",
+  "name": "ACTIVLAB BCAA XTRA INSTANT 800g",
+  "imageUrl": "assets/product-images/ACTIVLAB-BCAA-XTRA-INSTANT-800g-GLUTAMINA-AMINO.jpg",
+  "price": "16$",
+  "rating": 4.6,
+  "description": "Donec aliquet aliquam mi, ut commodo ipsum porta sit amet. Vestibulum aliquam neque id urna pretium eleifend. Vivamus mattis eros condimentum fringilla scelerisque. Proin porttitor eros a nisi aliquet, id venenatis nisl sodales. Praesent dictum nisl lorem, non aliquam orci rutrum a. Quisque vulputate faucibus egestas. Duis non sapien diam. Nullam vehicula, turpis fringilla ullamcorper iaculis, diam sapien pretium purus, ut laoreet risus purus vitae lorem. Pellentesque in ante eu dui efficitur posuere ac quis neque.",
+  "ingredients": [
+    "Vivamus",
+    "Aliquam",
+    "Pellentesque",
+    "Suspendisse",
+    "Vestibulum",
+    "Consectetur",
+    "Aenean",
+    "Maecenas",
+    "Curabitur",
+    "Malesuada"
+  ]
+}

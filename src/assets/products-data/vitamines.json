@@ -1,0 +1,114 @@
+[
+  {
+    "id": "product120",
+    "name": "SFD VITAMIN COMPLEX SPORT 120TAB",
+    "imageUrl": "assets/product-images/SFD-VITAMIN-COMPLEX-SPORT-120TAB-WITAMINY-MINERALY.jpg",
+    "price": "14$",
+    "rating": 4.2
+  },
+  {
+    "id": "product121",
+    "name": "KFD OMEGA 3+ 90 caps",
+    "imageUrl": "assets/product-images/KFD-OMEGA-3-90-kaps-330-EPA-220-EPA-WIT-E.jpg",
+    "price": "14$",
+    "rating": 4.5
+  },
+  {
+    "id": "product122",
+    "name": "OLIMP VITA-MIN MULTIPLE SPORT 120caps",
+    "imageUrl": "assets/product-images/OLIMP-VITA-MIN-MULTIPLE-SPORT-120cp-WITAMINY-PILL.jpg",
+    "price": "12$",
+    "rating": 4
+  },
+  {
+    "id": "product123",
+    "name": "OstroVit Omega 3 150 caps",
+    "imageUrl": "assets/product-images/OstroVit-Omega-3-150-caps-KWASY-TLUSZCZOWE-EPA-DHA.jpg",
+    "price": "11$",
+    "rating": 3.6
+  },
+  {
+    "id": "product124",
+    "name": "SFD ASHWAGANDHA 90tab",
+    "imageUrl": "assets/product-images/SFD-ASHWAGANDHA-90tab-ANTYOKSYDANT-STRES-TARCZYCA.jpg",
+    "price": "12$",
+    "rating": 3.8
+  },
+  {
+    "id": "product125",
+    "name": "ALLNUTRITION BERBERINE HCL 90caps",
+    "imageUrl": "assets/product-images/ALLNUTRITION-BERBERINE-HCL-90kaps-BERBERYNA-ADAPTO.jpg",
+    "price": "10$",
+    "rating": 3.7
+  },
+  {
+    "id": "product126",
+    "name": "OLIMP VITAMIN MULTIPLE 60caps",
+    "imageUrl": "assets/product-images/OLIMP-VITAMIN-MULTIPLE-60KPS-WITAMINY-ZDROWIE.jpg",
+    "price": "12$",
+    "rating": 3.2
+  },
+  {
+    "id": "product127",
+    "name": "SFD OMEGA 3 90 KAPS",
+    "imageUrl": "assets/product-images/SFD-OMEGA-3-90-KAPS-ODPORNOSC-EPA-KWASY-TLUSZCZOWE.jpg",
+    "price": "18$",
+    "rating": 3.3
+  },
+  {
+    "id": "product128",
+    "name": "LIMP GOLD OMEGA 3 D3+K2 60caps",
+    "imageUrl": "assets/product-images/OLIMP-GOLD-OMEGA-3-D3-K2-60kaps-ZDROWE-KOSCI-SERCE.jpg",
+    "price": "14$",
+    "rating": 3.3
+  },
+  {
+    "id": "product129",
+    "name": "SFD RHODIOLA ROSEA 90 TAB",
+    "imageUrl": "assets/product-images/SFD-RHODIOLA-ROSEA-90-TAB-ROZENIEC-GORSKI.jpg",
+    "price": "10$",
+    "rating": 4
+  },
+  {
+    "id": "product130",
+    "name": "OLIMP VITA-MIN ONE 60caps",
+    "imageUrl": "assets/product-images/OLIMP-VITA-MIN-ONE-60kaps-WITAMINY-DLA-AKTYWNYCH.jpg",
+    "price": "18$",
+    "rating": 4
+  },
+  {
+    "id": "product131",
+    "name": "OstroVit Guarana 90 tabs",
+    "imageUrl": "assets/product-images/OstroVit-Guarana-90-tabs-POBUDZENIE-KOFEINA-PAMIEC.jpg",
+    "price": "19$",
+    "rating": 3.7
+  },
+  {
+    "id": "product132",
+    "name": "HI TEC BLADE 130caps",
+    "imageUrl": "assets/product-images/HI-TEC-BLADE-100-Vitamin-Antyoksydanty-120-tab.jpg",
+    "price": "15$",
+    "rating": 3.2
+  },
+  {
+    "id": "product133",
+    "name": "ALLNUTRITION VITAMINALL SPORT 60caps",
+    "imageUrl": "assets/product-images/ALLNUTRITION-VITAMINALL-SPORT-60KAP-WITAMINY.jpg",
+    "price": "14$",
+    "rating": 4.3
+  },
+  {
+    "id": "product134",
+    "name": "OLIMP CHELA-MAG B6 FORTE 2x 60kaps",
+    "imageUrl": "assets/product-images/OLIMP-CHELA-MAG-B6-FORTE-2x-60kaps-MOCNY-MAGNEZ-MG.jpg",
+    "price": "17$",
+    "rating": 4.1
+  },
+  {
+    "id": "product135",
+    "name": "OLIMP GOLD-VIT C 1000 Forte 60kaps",
+    "imageUrl": "assets/product-images/OLIMP-GOLD-VIT-C-1000-Forte-60kaps-WITAMINA-C.jpg",
+    "price": "17$",
+    "rating": 4.4
+  }
+]

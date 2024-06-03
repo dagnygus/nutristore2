@@ -1,0 +1,201 @@
+@use '../../../colors.scss' as colors;
+
+:host {
+  background-color: rgba(174,174,174, 0.6);
+  backdrop-filter: blur(4px);
+  color: white;
+}
+
+.product-container {
+  display: grid;
+  padding: 0 12px 64px 12px;
+  gap: 12px;
+  justify-items: center;
+  grid-auto-flow: dense;
+  width: 100%;
+  max-width: 770px;
+  margin: 0 auto;
+}
+
+.product-name {
+  text-decoration: underline;
+  text-align: center;
+  margin: 16px 12px 0px 12px;
+  font-size: 22px;
+}
+
+.rating-container {
+  display: flex;
+  margin-top: 4px;
+  justify-content: center;
+}
+
+.product-image-container {
+  position: relative;
+
+  &::before {
+    display: block;
+    content: '';
+    padding-bottom: calc(100%);
+  }
+
+  > img {
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    top: calc(15% / 2);
+    left: calc(15% / 2);
+    object-fit: contain;
+
+  }
+}
+
+.price-panel {
+  font-size: 14px;
+  padding: 12px;
+}
+
+.price-panel, .product-image-container {
+  background-color: rgb(174,174,174);
+  border-radius: (6px);
+}
+
+.price-panel-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px 4px;
+  margin-top: 4px;
+
+  > button {
+    background-color: lighten(colors.$primary-color, 10%);
+    padding: 3px;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+}
+
+.count-holder {
+  text-align: center;
+  border: 2px solid lighten(colors.$primary-color, 10%);
+  border-radius: 4px;
+  background-color: rgb(220,220,220);
+  display: grid;
+
+  > span {
+    grid-column: 1/2;
+    grid-row: 1/2;
+
+    &:first-child {
+      transform: translateY(-14px);
+    }
+  }
+}
+
+.add-btn {
+  grid-column: 1/-1;
+}
+
+.ingredients-container {
+  font-size: 12px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ingeredient {
+  padding: 4px 6px;
+  background-color: lighten(colors.$primary-color, 15%);
+  margin: 2px;
+  border-radius: 4px;
+}
+
+.description-section {
+  padding: 0 4px;
+
+  > p {
+    font-size: 12px;
+  }
+}
+
+.assurances-list {
+  margin-top: 26px;
+}
+
+.assurances-list > li > p {
+  margin-left: 28px;
+}
+
+.price-panel, .ingredients-section, .description-section, .product-image-container, .product-name, .rating-container, .assurances-list {
+  width: 100%;
+  max-width: 360px;
+  grid-column: 1/-1;
+}
+
+@media (min-width: 640px) {
+  .product-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto) 1fr repeat(2, auto);
+  }
+
+  .product-image-container {
+    grid-column: 1/2;
+    grid-row: 3/5;
+  }
+
+  .price-panel, .ingredients-section {
+    grid-column: 2/3;
+  }
+
+  .price-panel, .ingredients-container {
+    font-size: 16px;
+  }
+
+  .description-section {
+    margin-top: 16px;
+    > p {
+      font-size: 16px;
+    }
+  }
+
+  .description-section, .assurances-list {
+    max-width: unset;
+  }
+
+  .price-panel-controls > button {
+    font-size: 16px;
+  }
+}
+
+.pending-container, .error-container {
+  display: flex;
+  height: 100%;
+  min-height: 75vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-container {
+  padding: 0 16px;
+  text-align: center;
+  width: 100%;
+  border: 1px solid red;
+
+  > mat-icon {
+    transform: translateY(30%) scale(1.7);
+  }
+}
+
+@media (min-width: 1024px) {
+  loading-spinner {
+    transform: translateY(-200%);
+  }
+
+  .error-container > p {
+    transform: translateY(-120px);
+  }
+
+  .error-container > mat-icon {
+    transform: translateY(calc(30% - 120px)) scale(1.7)
+  }
+}
+

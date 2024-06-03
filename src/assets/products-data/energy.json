@@ -1,0 +1,37 @@
+[
+  {
+    "id": "product172",
+    "name": "Psychodrine 30caps",
+    "imageUrl": "assets/product-images/psychodrine-30caps-revange-nutrition-sklep-shop-600x600_0.jpg",
+    "price": "18$",
+    "rating": 4.5
+  },
+  {
+    "id": "product173",
+    "name": "NZT Power 15caps",
+    "imageUrl": "assets/product-images/nzt-power-15-caps-core-labs-sklep-shop-suplon-600x600_0.jpg",
+    "price": "20$",
+    "rating": 3.9
+  },
+  {
+    "id": "product174",
+    "name": "Jump Starter 60caps",
+    "imageUrl": "assets/product-images/jump-starter-60caps-revange-nutrition-sklep-shop-suplon-600x600_0.jpg",
+    "price": "17$",
+    "rating": 3.4
+  },
+  {
+    "id": "product175",
+    "name": "4X Quatro Speed 60caps",
+    "imageUrl": "assets/product-images/4x-quatro-speed-60caps-core-labs-sklep-shop-suplon-600x600_0.jpg",
+    "price": "17$",
+    "rating": 4.6
+  },
+  {
+    "id": "product176",
+    "name": "Brain PRO 60caps",
+    "imageUrl": "assets/product-images/brain-pro-60caps_revange_nutrition_sklep_shop-600x600_0.jpg",
+    "price": "17$",
+    "rating": 4.3
+  }
+]

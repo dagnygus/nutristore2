@@ -1,0 +1,76 @@
+@use '../../../colors.scss' as colors;
+
+:host {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 80vh;
+  background-color: rgba(colors.$blue-grey-600, .6);
+  backdrop-filter: blur(4px);
+  // background-color: rgba;
+}
+
+cart-item {
+  margin: 4px 0;
+
+  &:first-of-type {
+    margin: 0 0 4px 0;
+  }
+
+  &:last-of-type {
+    margin: 4px 0 16px 0;
+  }
+}
+
+.summary-container, .buttons-container {
+  display: grid;
+}
+
+.summary-container {
+  grid-template-columns: 1fr auto;
+  padding: 8px 4px;
+  background-color: colors.$blue-grey-600;
+  border-radius: 4px;
+}
+
+cart-item, .summary-container {
+  width: 100%;
+  max-width: 340px;
+}
+
+.buttons-container {
+  grid-template-columns: repeat(2, auto);
+  gap: 2px
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+
+  @media (min-width: 340px) {
+    font-size: 16px;
+  }
+}
+
+.emty-message-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+  height: 100%;
+
+  > mat-icon {
+    transform: scale(2) translateY(-20px);
+  }
+}
+
+@media (min-width: 470px) {
+  cart-item, .summary-container {
+    max-width: 700px;
+  }
+}

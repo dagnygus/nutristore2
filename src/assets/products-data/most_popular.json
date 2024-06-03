@@ -1,0 +1,58 @@
+[
+  {
+    "id": "product189",
+    "name": "Lights Out 30caps",
+    "imageUrl": "assets/product-images/lights-out-30caps_revange_nutrition_sklep_shop-600x600_0.jpg",
+    "price": "10$",
+    "rating": 3.9
+  },
+  {
+    "id": "product97",
+    "name": "ACTIVLAB CREATINE TABS 120kaps",
+    "imageUrl": "assets/product-images/ACTIVLAB-CREATINE-TABS-120kaps-KREATYNA-SILA-MASA.jpg",
+    "price": "13$",
+    "rating": 3.8
+  },
+  {
+    "id": "product186",
+    "name": "Happy Bee 60caps",
+    "imageUrl": "assets/product-images/happy-bee-60caps-revange-nutrition-sklep-shop-suplon-600x600_0.jpg",
+    "price": "10$",
+    "rating": 4.4
+  },
+  {
+    "id": "product88",
+    "name": "TREC CM3 GOLD CORE 360 kaps",
+    "imageUrl": "assets/product-images/TREC-CM3-GOLD-CORE-360-kaps-JABLACZAN-BETA-ALANINA.jpg",
+    "price": "15$",
+    "rating": 3.8
+  },
+  {
+    "id": "product140",
+    "name": "NUTREND FLEXIT DRINK GOLD 400g",
+    "imageUrl": "assets/product-images/NUTREND-FLEXIT-DRINK-GOLD-400g-GLUKOZAMINA-STAWY.jpg",
+    "price": "17$",
+    "rating": 3.1
+  },
+  {
+    "id": "product15",
+    "name": "ALLNUTRITION BETA ALANINE 500g",
+    "imageUrl": "assets/product-images/ALLNUTRITION-BETA-ALANINE-500-g-BETA-ALANINA-SILA.jpg",
+    "price": "15$",
+    "rating": 4
+  },
+  {
+    "id": "product59",
+    "name": "TREC BOOGIEMAN 300g PRE-WORKOUT",
+    "imageUrl": "assets/product-images/TREC-BOOGIEMAN-300g-PRE-WORKOUT-POBUDZENIE-POMPA.jpg",
+    "price": "15$",
+    "rating": 4.4
+  },
+  {
+    "id": "product32",
+    "name": "TREC CLENBUREXIN II 90caps",
+    "imageUrl": "assets/product-images/TREC-CLENBUREXIN-II-90KAPS-MOCNY-SPALACZ-TLUSZCZU.jpg",
+    "price": "18$",
+    "rating": 4.5
+  }
+]

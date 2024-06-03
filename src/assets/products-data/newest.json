@@ -1,0 +1,114 @@
+[
+  {
+    "id": "product131",
+    "name": "OstroVit Guarana 90 tabs",
+    "imageUrl": "assets/product-images/OstroVit-Guarana-90-tabs-POBUDZENIE-KOFEINA-PAMIEC.jpg",
+    "price": "19$",
+    "rating": 3.7
+  },
+  {
+    "id": "product64",
+    "name": "IRONHORSE CREA FIGHT 2.0 840G",
+    "imageUrl": "assets/product-images/IRONHORSE-CREA-FIGHT-2-0-840G-POMARAN-POSTWORKOUT.jpg",
+    "price": "11$",
+    "rating": 3.8
+  },
+  {
+    "id": "product26",
+    "name": "GASPARI NUTRITION DTN8 FAT BURNER",
+    "imageUrl": "assets/product-images/GASPARI-NUTRITION-DTN8-FAT-BURNER-SPALACZ-TLUSZCZU.jpg",
+    "price": "13$",
+    "rating": 4.7
+  },
+  {
+    "id": "product43",
+    "name": "OstroVit PUMP Pre-Workout 500 g",
+    "imageUrl": "assets/product-images/OstroVit-PUMP-Pre-Workout-500-g-PRZEDTRENINGOWKA.jpg",
+    "price": "10$",
+    "rating": 3
+  },
+  {
+    "id": "product63",
+    "name": "IronMaxx Downer 330g",
+    "imageUrl": "assets/product-images/IronMaxx-Downer-330g-Gaba-5htp-sen-regeneracja.jpg",
+    "price": "12$",
+    "rating": 3.1
+  },
+  {
+    "id": "product35",
+    "name": "IRONFLEX L-CARNITINE 1000mg 100caps",
+    "imageUrl": "assets/product-images/IRONFLEX-L-CARNITINE-1000mg-100t-KARNITYNA-SPALACZ.jpg",
+    "price": "12$",
+    "rating": 3.6
+  },
+  {
+    "id": "product128",
+    "name": "LIMP GOLD OMEGA 3 D3+K2 60caps",
+    "imageUrl": "assets/product-images/OLIMP-GOLD-OMEGA-3-D3-K2-60kaps-ZDROWE-KOSCI-SERCE.jpg",
+    "price": "14$",
+    "rating": 3.3
+  },
+  {
+    "id": "product72",
+    "name": "OSTROVIT DEXTROSE 1500G",
+    "imageUrl": "assets/product-images/OSTROVIT-DEXTROSE-1500G-DEKSTROZA-CARB-WEGLOWODANY.jpg",
+    "price": "16$",
+    "rating": 3.1
+  },
+  {
+    "id": "product137",
+    "name": "MSM 1500MG 200 TAB",
+    "imageUrl": "assets/product-images/NOW-MSM-1500MG-200-TAB-STAWY-KOSCI-FLEX.jpg",
+    "price": "11$",
+    "rating": 4.7
+  },
+  {
+    "id": "product38",
+    "name": "OSTROVIT PIPERINE 100 CAPS",
+    "imageUrl": "assets/product-images/OSTROVIT-PIPERINE-100-VCAPS-SPALANIE-MOCNA-PIEPRZ.jpg",
+    "price": "19$",
+    "rating": 4
+  },
+  {
+    "id": "product58",
+    "name": "ECOMAX AAKG 500 g",
+    "imageUrl": "assets/product-images/ECOMAX-AAKG-500-g-ARGININA-PRZEDTRENINGOWKA-SILA.jpg",
+    "price": "15$",
+    "rating": 3.9
+  },
+  {
+    "id": "product145",
+    "name": "EVOLITE ULTRA FLEX 180 kap",
+    "imageUrl": "assets/product-images/EVOLITE-ULTRA-FLEX-180-kap-MSM-STAWY-KOLAGEN-VIT-C.jpg",
+    "price": "13$",
+    "rating": 4.6
+  },
+  {
+    "id": "product41",
+    "name": "EVOLITE CITRULLINE MALATE 300g",
+    "imageUrl": "assets/product-images/EVOLITE-CITRULLINE-MALATE-300g-CYTRULINA-POMPA-MOC.jpg",
+    "price": "16$",
+    "rating": 3.6
+  },
+  {
+    "id": "product102",
+    "name": "DARK LABS MK-677 60 kaps",
+    "imageUrl": "assets/product-images/DARK-LABS-MK-677-60-kaps-SARM-ORYGINAL.jpg",
+    "price": "11$",
+    "rating": 4.7
+  },
+  {
+    "id": "product178",
+    "name": "Phenibut 90caps",
+    "imageUrl": "assets/product-images/phenibut-90caps-revange-nutrition-sklep-shop-suplon-600x600_0.jpg",
+    "price": "20$",
+    "rating": 3.6
+  },
+  {
+    "id": "product165",
+    "name": "Neuracaps Smart 60caps",
+    "imageUrl": "assets/product-images/Neuracaps-Smart-Pamiec-i-Koncentracja-50kaps.jpg",
+    "price": "10$",
+    "rating": 3.6
+  }
+]

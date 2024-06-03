@@ -1,0 +1,31 @@
+<form [formGroup]="vm.paymentFormGroup" (ngSubmit)="vm.trySubmitPaymentForm()">
+
+  <p class="color-accent">Provide credid card data</p>
+
+  <form-input type="text"
+              name="cardNumber"
+              color="accent"
+              labelText="Card number"
+              appearance="outline"
+              [checkTrigger]="vm.paymentFormCheckTrigger"/>
+
+  <form-input type="text"
+              name="cvc"
+              color="accent"
+              labelText="CVC"
+              appearance="outline"
+              [checkTrigger]="vm.paymentFormCheckTrigger"/>
+
+  <form-input type="text"
+              name="expirationDate"
+              color="accent"
+              labelText="Expiration date"
+              appearance="outline"
+              placeholder="DD/MM/YYYY"
+              [checkTrigger]="vm.paymentFormCheckTrigger"/>
+
+  <div>
+    <a mat-raised-button color="warn" routerLink="/cart">Cancel</a>
+    <button mat-raised-button color="accent" type="submit">Accept</button>
+  </div>
+</form>

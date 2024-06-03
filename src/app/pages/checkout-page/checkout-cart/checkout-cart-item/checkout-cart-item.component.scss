@@ -1,0 +1,58 @@
+@use '../../../../../colors.scss' as colors;
+
+:host {
+  display: grid;
+  background-color: rgb(174, 174, 174);
+  padding: 12px;
+  gap: 4px;
+  border-radius: 4px;
+}
+
+.image-container {
+  position: relative;
+
+  > img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+
+    @media (min-width: 410px) {
+      width: 120px;
+      height: 120px;
+    }
+  }
+}
+
+.count-holder {
+  font-size: 12px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: colors.$primary-color;
+  border-radius: 50%;
+  color: white;
+}
+
+.name-container, .count-holder, .image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name-container, .price-container {
+  background-color: colors.$blue-grey-600;
+  text-align: center;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.name-container {
+  color: colors.$accent-color;
+}
+
+.price-container {
+  color: white;
+  font-size: 14px;
+}

@@ -1,0 +1,20 @@
+{
+  "id": "product28",
+  "name": "SFD FAT BURNER 100 caps",
+  "imageUrl": "assets/product-images/SFD-FAT-BURNER-100-kap-SPALACZ-TLUSZCZU.jpg",
+  "price": "12$",
+  "rating": 4.4,
+  "description": "Duis faucibus eros ante, eget placerat tortor ultricies nec. Duis ex mi, rutrum ac posuere eget, eleifend ac nisl. Proin vulputate vel felis vitae lobortis. Cras at mollis libero. Integer tincidunt mollis ultricies. Ut elementum congue mi eu lacinia. Nullam ac maximus elit. Nulla euismod tincidunt odio, id egestas augue dictum et. Aenean luctus ex eu dolor consectetur pretium. Quisque nec tellus mi. Donec mollis neque sit amet ornare euismod. Nulla suscipit leo id porttitor viverra. Phasellus pulvinar pellentesque ipsum.",
+  "ingredients": [
+    "Pellentesque ",
+    "Purus",
+    "Curabitur",
+    "Fringilla",
+    "Vivamus",
+    "Maecenas",
+    "Vivamus",
+    "Vestibulum",
+    "Dignissim",
+    "Suspendisse"
+  ]
+}

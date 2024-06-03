@@ -1,0 +1,17 @@
+<mat-form-field [appearance]="appearance" [color]="color">
+  <mat-label>{{labelText}}</mat-label>
+  <input [type]="_getType()"
+         [name]="name"
+         [formControlName]="name"
+         matInput
+         [placeholder]="placeholder"
+         (input)="checkErrors()"
+         (focus)="detectChanges(); removeAyncValidators(); checkErrors()"
+         (blur)="detectChanges(); restoreAsyncValidators() ;checkErrors()">
+  @if(_isWithIcon()) {
+    <mat-icon matSuffix (click)="iconClick.emit()">{{_getIconType()}}</mat-icon>
+  }
+  @if (errorMessage) {
+    <mat-error>{{errorMessage}}</mat-error>
+  }
+</mat-form-field>

@@ -1,0 +1,38 @@
+<article>
+  <div class="info-container">
+    <div class="info-heading-container col-[1/2]">
+      <h2>Fast, save delivery</h2>
+    </div>
+    <div class="info-heading-container col-[2/3]">
+      <h2>Only original products</h2>
+    </div>
+    <div class="info-body-container col-[1/2]">
+      <img src="assets/images/fast_delivery_icon.png" alt="fast_delivery_icon">
+      <p>We send the ordered products by courier within 24 hours of placing the order. Each shipment is safely and discreetly packed.</p>
+    </div>
+    <div class="info-body-container col-[2/3]">
+      <img src="assets/images/certificate_icon.inkscape.png" alt="fast_delivery_icon">
+      <p>We guarantee that all products from our offer are original because they are delivered to us directly from the manufacturers.</p>
+    </div>
+  </div>
+  <div class="delivery-info-container">
+    <img src="assets/images/ueflag.jpg" alt="ueflag">
+    <p>
+      We deliver orders throughout Europe. We send foreign shipments via DPD or UPS. Each shipment is safely and discreetly packed.
+    </p>
+    <div class="clear-both"></div>
+  </div>
+</article>
+
+<section class="block">
+  <h3 class="text-white text-[28px] text-center my-[16px]">NEWEST</h3>
+  <products-list [data]="vm.newestProducts" [stateStatus]="vm.newestStatus" [category]="vm.newestCategory" (addItem)="onAddItem($event)"/>
+</section>
+<section class="block">
+  <h3 class="text-white text-[28px] text-center my-[16px]">MOST POPULAR</h3>
+  <products-list [data]="vm.mostPopularProducts" [stateStatus]="vm.mostPopularStatus" [category]="vm.mostPopularCategory" (addItem)="onAddItem($event)"/>
+</section>
+<section class="block mb-[32px]">
+  <h3 class="text-white text-[28px] text-center my-[16px]">RECOMENDED</h3>
+  <products-list [data]="vm.recomendedProducts" [stateStatus]="vm.recomendedStatus" [category]="vm.recomendedCategory" (addItem)="onAddItem($event)"/>
+</section>

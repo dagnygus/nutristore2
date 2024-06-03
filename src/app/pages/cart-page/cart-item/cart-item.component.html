@@ -1,0 +1,23 @@
+<div class="item-image-container">
+  <img [src]="cartItem.imageUrl" alt="">
+</div>
+
+<div class="count-controls">
+  <button class="mat-elevation-z2" (click)="vm.increaseCartItemCount(index)">+</button>
+  <div class="count-container mat-elevation-z2"><span [textContent]="cartItem.quantity"></span></div>
+  <button class="mat-elevation-z2" (click)="vm.decreaseCartItemCount(index)">-</button>
+</div>
+
+<div class="delete-button-container">
+  <button mat-fab color="warn" (click)="vm.removeCartItem(index)"><mat-icon>delete</mat-icon></button>
+</div>
+
+<div class="item-name-container">
+  <h3 [textContent]="cartItem.name"></h3>
+</div>
+
+<div class="price-container">
+  <p>Total price <span [textContent]="cartItem.totalPrice"></span></p>
+</div>
+
+<div></div>

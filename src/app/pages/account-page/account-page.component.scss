@@ -1,0 +1,65 @@
+:host {
+  background-color: rgb(173, 173, 173, .6);
+  backdrop-filter: blur(4px);
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  text-align: center;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 4px;
+}
+
+h3 {
+  font-size: 18px;
+  margin: 12px 0;
+}
+
+p {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.accont-page-actions {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 4px;
+  margin-top: 32px;
+}
+
+.btn-text {
+  font-size: 12px;
+}
+
+@media (min-width: 1024px) {
+  :host {
+    justify-content: flex-start;
+    padding-top: 48px;
+  }
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 6px;
+  }
+
+  h3 {
+    font-size: 24px;
+    margin: 16px;
+  }
+
+  p {
+    margin: 6px 0;
+    font-size: 16px;
+  }
+
+  .btn-text {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,13 @@
+<mat-dialog-content>
+  <div class="w-full text-center">
+    <mat-icon color="accent" class="scale-150">done</mat-icon>
+  </div>
+  <p>
+    <span class="color-accent">Success!</span> You have added {{data}} to your cart! Congratulations! You have recived
+    Free Shopping by DPD or InPost.
+  </p>
+</mat-dialog-content>
+<mat-dialog-actions align="center">
+  <button mat-raised-button color="primary" mat-dialog-close><mat-icon color="accent">arrow_back</mat-icon><span class="color-accent">Continue shopping</span></button>
+  <a routerLink="/cart" mat-raised-button color="primary" mat-dialog-close><mat-icon color="accent">shopping_cart_checkout</mat-icon><span class="color-accent">Order now</span></a>
+</mat-dialog-actions>
