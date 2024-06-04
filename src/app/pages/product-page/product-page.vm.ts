@@ -68,12 +68,11 @@ export class ProductPageViewModel extends ViewModelBase {
       productRef.state.productData ? StateStatus.complete : StateStatus.empty,
       statusSource
     );
-
-    router.events.pipe(
-      filter((e) => e instanceof NavigationEnd),
-      this.takeUntilDestroy(),
-    ).subscribe(() => _store.dispatch(getProduct({ id: routerStareRef.state.state.params['productId'] })));
-
+    
+    _store.pipe(
+      select(({ router }) => router?.state.params['productId']),
+      filter((id) => id != null),
+    ).subscribe((id) => _store.dispatch(getProduct({ id })))
   }
 
   incraseCount(): void {

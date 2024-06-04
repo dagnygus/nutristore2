@@ -61,10 +61,10 @@ export class ProductsPageViewModel extends ViewModelBase implements OnDestroy {
       statusSource
     );
 
-    router.events.pipe(
-      filter((e) => e instanceof NavigationEnd),
-      this.takeUntilDestroy()
-    ).subscribe(() => _store.dispatch(getProducts({ category: routerStateRef.state.state.params['product-category'] })))
+    _store.pipe(
+      select(({ router }) => router?.state.params['product-category']),
+      filter((category) => category != null),
+    ).subscribe((category) => _store.dispatch(getProducts({ category })));
   }
 
   addItemToCart(item: CartItem): void {
