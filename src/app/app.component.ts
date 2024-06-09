@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Renderer2, ViewEncapsulation, effect, inject } from '@angular/core';
-import { CdkScrollable } from '@angular/cdk/scrolling'
-import { initializeComponent } from './noop-zone';
+import { CdkScrollable, ScrollingModule } from '@angular/cdk/scrolling'
+import { InPipeModule, initializeComponent, patchNgNoopZoneForAngularCdk } from './noop-zone';
 import { AppViewModel } from './app.vm';
 import { GlobalLoadingSpinner } from './common/services/global-loading-spinner.service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
@@ -8,6 +8,10 @@ import { NavigationEnd, Router } from '@angular/router';
 import { filter, skip } from 'rxjs';
 import { Platform } from '@angular/cdk/platform';
 import { DOCUMENT } from '@angular/common';
+import { MainContentComponent } from './common/components/main-content/main-content.component';
+import { NutristoreFooterComponent } from './common/components/nutristore-footer/nutristore-footer.component';
+import { NutristoreHeaderComponent } from './common/components/nutristore-header/nutristore-header.component';
+import { SidenavMenuComponent } from './common/components/sidenav-menu/sidenav-menu.component';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +20,16 @@ import { DOCUMENT } from '@angular/common';
   hostDirectives: [CdkScrollable],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  providers: [AppViewModel]
+  providers: [AppViewModel],
+  standalone: true,
+  imports: [
+    NutristoreHeaderComponent,
+    MainContentComponent,
+    SidenavMenuComponent,
+    NutristoreFooterComponent,
+    InPipeModule,
+    ScrollingModule
+  ]
 })
 export class AppComponent {
   cdRef = initializeComponent(this);
@@ -28,6 +41,8 @@ export class AppComponent {
   document = inject(DOCUMENT)
 
   constructor() {
+    patchNgNoopZoneForAngularCdk();
+
     this.vm.onBeginSigninOrSignup.pipe(takeUntilDestroyed()).subscribe(() => {
       this.globalLoadingSpinner.show();
     });

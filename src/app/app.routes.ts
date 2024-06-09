@@ -31,7 +31,7 @@ const onlyAuthenticatedCanMatch: CanMatchFn = (_, segmants) => {
   return router.parseUrl('/login');
 }
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomePageComponent },
   {
     path: 'products/:product-category',
@@ -105,9 +105,3 @@ const routes: Routes = [
     loadComponent: () => import('./pages/regulations-page/regulations-page.component').then((m) => m.RegulationsPageComponent)
   }
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules, initialNavigation: 'enabledBlocking' })],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
