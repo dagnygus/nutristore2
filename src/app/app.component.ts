@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ElementRef, HostListener, Renderer2, ViewEncapsulation, effect, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, ViewEncapsulation, inject } from '@angular/core';
 import { CdkScrollable, ScrollingModule } from '@angular/cdk/scrolling'
 import { InPipeModule, initializeComponent, patchNgNoopZoneForAngularCdk } from './noop-zone';
 import { AppViewModel } from './app.vm';
