@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormInputComponent } from '../../common/components/form-input/form-input.component';
 import { MatButtonModule } from '@angular/material/button';
 import { Route, RouterModule } from '@angular/router';
+import { LoadingSpinnerComponent } from '../../common/components/loading-spinner/loading-spinner.component';
 
 @Component({
   selector: 'app-new-password-page',
@@ -15,7 +16,8 @@ import { Route, RouterModule } from '@angular/router';
     NzIfModule,
     NzLetModule,
     MatButtonModule,
-    RouterModule
+    RouterModule,
+    LoadingSpinnerComponent
   ],
   templateUrl: './new-password-page.component.html',
   styleUrl: './new-password-page.component.scss',

@@ -5,6 +5,7 @@ import { isProductCategory } from './utils/utils';
 import { AuthStateRef } from './state/auth/state';
 import { BrowserCache } from './common/services/browser-cache.service';
 import { BrowserCacheKey } from './models/abstract-models';
+import { Platform } from '@angular/cdk/platform';
 
 const onlyAnnonymousCanMach: CanMatchFn = () => {
   const authStateRef = inject(AuthStateRef);
@@ -22,13 +23,14 @@ const onlyAnnonymousCanMach: CanMatchFn = () => {
 
 const onlyAuthenticatedCanMatch: CanMatchFn = (_, segmants) => {
   const authStateRef = inject(AuthStateRef);
+  const platform = inject(Platform)
   if (authStateRef.state.data) {
     return true;
   }
   const browserCache = inject(BrowserCache);
   const router = inject(Router);
   browserCache.setString(BrowserCacheKey.TARGET_AUTHORIZED_URL, '/' + segmants.map((s) => s.path).join('/'));
-  return router.parseUrl('/login');
+  return platform.isBrowser ? router.parseUrl('/login') : true;
 }
 
 export const routes: Routes = [

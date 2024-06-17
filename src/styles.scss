@@ -232,6 +232,15 @@ form-input, form > div, .error-message-conteiner {
   justify-self: center;
 }
 
+.server-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 70vh;
+  grid-column: 1/-1;
+}
+
 @keyframes slide {
   0% {transform:translateX(-100%);}
   100% {transform:translateX(100%);}

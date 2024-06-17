@@ -13,6 +13,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { GlobalLoadingSpinner } from '../../common/services/global-loading-spinner.service';
 import { CdkScrollable } from '@angular/cdk/scrolling';
 import { DOCUMENT } from '@angular/common';
+import { LoadingSpinnerComponent } from '../../common/components/loading-spinner/loading-spinner.component';
 
 @Component({
   selector: 'checkout-page',
@@ -26,7 +27,8 @@ import { DOCUMENT } from '@angular/common';
     DeliveryAddressInfoComponent,
     CheckoutSummaryComponent,
     CheckoutPaymentComponent,
-    NzIfModule
+    NzIfModule,
+    LoadingSpinnerComponent
   ],
   templateUrl: './checkout-page.component.html',
   styleUrl: './checkout-page.component.scss',

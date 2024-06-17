@@ -23,6 +23,7 @@ import { CustomRouterSerializer } from './state/router/router-serializer';
 import { SearchStateEffects } from './state/search/search.effects';
 import { searchReducer } from './state/search/search.reducer';
 import { IMAGE_CONFIG } from '@angular/common';
+import { provideClientHydration } from '@angular/platform-browser';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -57,5 +58,6 @@ export const appConfig: ApplicationConfig = {
         disableImageLazyLoadWarning: true
       }
     },
+    provideClientHydration(),
   ]
 };

@@ -1,23 +1,41 @@
 import { AuthStateRef } from './../../state/auth/state';
 import { Store, select } from '@ngrx/store';
-import { Injectable, Signal } from "@angular/core";
+import { Injectable, Signal, signal } from "@angular/core";
 import { ViewModelBase } from "../../models/object-models";
 import { AppState, AuthData } from "../../models/abstract-models";
 import { Router } from '@angular/router';
 import { filter } from 'rxjs';
-import { BrowserCache } from '../../common/services/browser-cache.service';
 import { NzScheduler, Priority } from '../../noop-zone';
+import { Platform } from '@angular/cdk/platform';
 
 @Injectable()
 export class AccountPageViewModel extends ViewModelBase {
 
   userData: Signal<AuthData>;
+  isServer = false
 
   constructor(store: Store<AppState>,
               authStateRef: AuthStateRef,
               router: Router,
-              nzScheduler: NzScheduler) {
+              nzScheduler: NzScheduler,
+              platform: Platform) {
     super();
+
+    if (!platform.isBrowser) {
+      this.isServer = true
+      this.userData = signal({
+        firstName: '',
+        lastName: '',
+        email: '',
+        city: '',
+        street: '',
+        state: '',
+        country: '',
+        zipCode: ''
+      })
+      return;
+    }
+
     if (authStateRef.state.data === null) {
       throw new Error('Unauthenticated user is not allowed to reach account page!');
     }

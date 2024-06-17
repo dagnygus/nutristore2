@@ -91,3 +91,5 @@ export function getTotalPriceFromItems(items: readonly CartItem[]): string {
   }
   return totalPrice + '$';
 }
+
+export const returnFakeNever: () => never  = (() => {}) as any;

@@ -12,6 +12,8 @@ import { NzScheduler, Priority } from '../../noop-zone';
 import { Router } from '@angular/router';
 import { AppHttpService } from '../../common/services/app-http.service';
 import { clearCart } from '../../state/cart/actions';
+import { Platform } from '@angular/cdk/platform';
+import { returnFakeNever } from '../../utils/utils';
 
 @Injectable()
 export class CheckoutPageViewModel extends ViewModelBase {
@@ -40,6 +42,7 @@ export class CheckoutPageViewModel extends ViewModelBase {
   paymentFormCheckTrigger: Observable<any>;
   onOrderPlacing = this._onOrderPlacing.asObservable();
   onOrderPlaced = this._onOrderPlaced.asObservable();
+  isServer = false;
 
   constructor(
     store: Store<AppState>,
@@ -48,9 +51,46 @@ export class CheckoutPageViewModel extends ViewModelBase {
     authStateRef: AuthStateRef,
     router: Router,
     httpService: AppHttpService,
-    nzScheduler: NzScheduler
+    nzScheduler: NzScheduler,
+    private _platform: Platform
   ) {
     super();
+
+    if (!_platform.isBrowser) {
+      this.isServer = true;
+      this.itemsPressent = signal(false);
+      this.cartItems = signal([]);
+      this.totalPrice = signal('');
+      this.userData = signal({ firstName: '', lastName: '' });
+      this.addressFormSubmitDissabled = signal(false);
+      this.paymentFormSubmitDissabled = signal(false);
+      this.addressFormCheckTrigger = new Observable();
+      this.paymentFormCheckTrigger = new Observable();
+      this.addressData = signal({
+        city: '',
+        street: '',
+        state: '',
+        country: '',
+        zipCode: ''
+      })
+
+      this.addressFormGroup = formBuilder.group({
+        city: formBuilder.control(''),
+        street: formBuilder.control(''),
+        state: formBuilder.control(''),
+        country: formBuilder.control(''),
+        zipCode: formBuilder.control('')
+      });
+      this.paymentFormGroup = formBuilder.group({
+        cardNumber: '',
+        cvc: '',
+        expirationDate: ''
+      });
+      this._addressFormSubmiter = null!;
+      this._addressData = null!;
+      this._paymentFormSubmiter = null!;
+      return;
+    }
 
     if (authStateRef.state.data === null) {
       throw new Error('Chekout page: this page can not be reached by anonymous user!');
@@ -209,7 +249,10 @@ export class CheckoutPageViewModel extends ViewModelBase {
   override ngOnDestroy(): void {
     super.ngOnDestroy();
     this._subscription.unsubscribe();
-    this._addressFormSubmiter.dispose();
+    if (this._platform.isBrowser) {
+      this._addressFormSubmiter.dispose();
+      this._paymentFormSubmiter.dispose();
+    }
   }
 }
 

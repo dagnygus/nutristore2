@@ -1,17 +1,19 @@
-import { ChangeDetectionStrategy, Component, HostListener, ViewEncapsulation, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, NgZone, ViewEncapsulation, inject } from '@angular/core';
 import { CdkScrollable, ScrollingModule } from '@angular/cdk/scrolling'
-import { InPipeModule, initializeComponent, patchNgNoopZoneForAngularCdk } from './noop-zone';
+import { InPipeModule, NzScheduler, initializeComponent, patchNgNoopZoneForAngularCdk } from './noop-zone';
 import { AppViewModel } from './app.vm';
 import { GlobalLoadingSpinner } from './common/services/global-loading-spinner.service';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router } from '@angular/router';
-import { filter, skip } from 'rxjs';
+import { filter, skip, take } from 'rxjs';
 import { Platform } from '@angular/cdk/platform';
 import { DOCUMENT } from '@angular/common';
 import { MainContentComponent } from './common/components/main-content/main-content.component';
 import { NutristoreFooterComponent } from './common/components/nutristore-footer/nutristore-footer.component';
 import { NutristoreHeaderComponent } from './common/components/nutristore-header/nutristore-header.component';
 import { SidenavMenuComponent } from './common/components/sidenav-menu/sidenav-menu.component';
+
+NgZone.assertInAngularZone = function() {}
 
 @Component({
   selector: 'app-root',
@@ -41,6 +43,12 @@ export class AppComponent {
   document = inject(DOCUMENT)
 
   constructor() {
+
+    const ngZone = inject(NgZone)
+    inject(NzScheduler).onStable.pipe(take(1) ,takeUntilDestroyed()).subscribe(() => {
+      ngZone.onStable.emit();
+    })
+
     patchNgNoopZoneForAngularCdk();
 
     this.vm.onBeginSigninOrSignup.pipe(takeUntilDestroyed()).subscribe(() => {

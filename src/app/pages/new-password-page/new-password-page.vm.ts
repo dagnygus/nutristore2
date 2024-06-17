@@ -8,10 +8,10 @@ import { Actions, ofType } from "@ngrx/effects";
 import { Router } from "@angular/router";
 import { BrowserCache } from "../../common/services/browser-cache.service";
 import { authStateError, updatePassword, updatePasswordSuccess } from "../../state/auth/actions";
-import { Observable, Subscription, filter, map, merge, take, takeUntil } from "rxjs";
+import { Observable, Subscription, filter, map, take } from "rxjs";
 import { NzScheduler, Priority } from "../../noop-zone";
-import { hasErrorMessage } from "../../utils/utils";
-import { AuthStateRef } from "../../state/auth/state";
+import { hasErrorMessage, returnFakeNever } from "../../utils/utils";
+import { Platform } from "@angular/cdk/platform";
 
 @Injectable()
 export class NewPasswordPageViewModel extends ViewModelBase {
@@ -29,6 +29,7 @@ export class NewPasswordPageViewModel extends ViewModelBase {
   submitDisabled: Signal<boolean>;
   errorMessage: Signal<string>;
   checkTrigger: Observable<any>;
+  isServer = false;
 
   get previusUrl(): string {
     return this._browserCache.getString(BrowserCacheKey.PREV_PAGE_URL) || '/account';
@@ -41,8 +42,24 @@ export class NewPasswordPageViewModel extends ViewModelBase {
     router: Router,
     private _browserCache: BrowserCache,
     nzScheduler: NzScheduler,
+    private _platform: Platform
   ) {
     super();
+
+    if (!_platform.isBrowser) {
+      this.isServer = true;
+      this._formSubmiter = null!;
+      this.submitDisabled = signal(false);
+      this.errorMessage = signal('');
+      this.checkTrigger = new Observable();
+      this.formGroup = formBuilder.group({
+        oldPassword: formBuilder.control(''),
+        newPassword: formBuilder.control(''),
+        confirmPassword: formBuilder.control('')
+      })
+      return;
+    }
+
     this.formGroup = formBuilder.group({
       oldPassword: formBuilder.control('', [
         validationWithMessage(Validators.required, 'Old password is required!'),
@@ -113,5 +130,8 @@ export class NewPasswordPageViewModel extends ViewModelBase {
   override ngOnDestroy(): void {
     super.ngOnDestroy();
     if (this._subscription) { this._subscription.unsubscribe(); }
+    if (this._platform.isBrowser) {
+      this._formSubmiter.dispose();
+    }
   }
 }

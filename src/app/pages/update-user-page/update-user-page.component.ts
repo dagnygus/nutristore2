@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { Route, RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { FormInputComponent } from '../../common/components/form-input/form-input.component';
+import { LoadingSpinnerComponent } from '../../common/components/loading-spinner/loading-spinner.component';
 
 @Component({
   selector: 'app-update-user-page',
@@ -15,7 +16,8 @@ import { FormInputComponent } from '../../common/components/form-input/form-inpu
     NzLetModule,
     NzIfModule,
     MatButtonModule,
-    FormInputComponent
+    FormInputComponent,
+    LoadingSpinnerComponent
   ],
   templateUrl: './update-user-page.component.html',
   styleUrl: './update-user-page.component.scss',

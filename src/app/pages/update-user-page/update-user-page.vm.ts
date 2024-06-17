@@ -1,4 +1,4 @@
-import { Injectable, Signal } from "@angular/core";
+import { Injectable, Signal, signal } from "@angular/core";
 import { ViewModelBase } from "../../models/object-models";
 import { FormGroup, NonNullableFormBuilder, Validators } from "@angular/forms";
 import { AppState, BrowserCacheKey, UpdateFormControls } from "../../models/abstract-models";
@@ -10,7 +10,8 @@ import { BrowserCache } from "../../common/services/browser-cache.service";
 import { Store, select } from "@ngrx/store";
 import { AuthStateRef } from "../../state/auth/state";
 import { authStateError, updateUser, updateAuthState } from "../../state/auth/actions";
-import { hasErrorMessage } from "../../utils/utils";
+import { hasErrorMessage, returnFakeNever } from "../../utils/utils";
+import { Platform } from "@angular/cdk/platform";
 
 @Injectable()
 export class UpdateUserPageViewModel extends ViewModelBase {
@@ -22,9 +23,10 @@ export class UpdateUserPageViewModel extends ViewModelBase {
   checkTrigger: Observable<any>;
   submitDisabled: Signal<boolean>;
   errorMessage: Signal<string>;
+  isServer = false;
 
   get previousUrl(): string {
-    return this._browserCache.getString(BrowserCacheKey.PREV_PAGE_URL) || '/account'
+    return this._browserCache.getString(BrowserCacheKey.PREV_PAGE_URL) || '/account';
   }
 
   constructor(
@@ -33,9 +35,29 @@ export class UpdateUserPageViewModel extends ViewModelBase {
     router: Router,
     private _browserCache: BrowserCache,
     store: Store<AppState>,
-    authStateRef: AuthStateRef
+    authStateRef: AuthStateRef,
+    private _platform: Platform
   ) {
     super();
+
+    if (!_platform.isBrowser) {
+      this.isServer = true;
+      this._formSubmiter = null!;
+      this.checkTrigger = new Observable();
+      this.submitDisabled = signal(false);
+      this.errorMessage = signal('');
+      this.formGroup = formBuilder.group({
+        firstName: formBuilder.control(''),
+        lastName: formBuilder.control(''),
+        email: formBuilder.control(''),
+        city: formBuilder.control(''),
+        street: formBuilder.control(''),
+        state: formBuilder.control(''),
+        country: formBuilder.control(''),
+        zipCode: formBuilder.control(''),
+      })
+      return;
+    }
 
     const userData = authStateRef.state.data;
 
@@ -115,5 +137,13 @@ export class UpdateUserPageViewModel extends ViewModelBase {
 
   trySubmit(): void {
     this._formSubmiter.trySubmit();
+  }
+
+  override ngOnDestroy(): void {
+    this._subscription.unsubscribe();
+    this._sanitizationSampler.complete();
+    if (this._platform.isBrowser) {
+      this._formSubmiter.dispose();
+    }
   }
 }
